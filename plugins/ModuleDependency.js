@@ -45,9 +45,9 @@ class ModuleDependency {
     const { projectName, packageName, resObj: { dependency } } = this
 
     if (packagePath.includes(packageName) && (issuer && !issuer.includes(packageName))) {
-      // console.log(issuer)
-      // console.log(packagePath)
-      // console.log('---------------------------------------------')
+      console.log(issuer)
+      console.log(packagePath)
+      console.log('---------------------------------------------')
 
       packagePath = `${packageName}${packagePath.split(packageName)[1].split(sep).join('/')}`
       issuer = `${projectName}${issuer.split(projectName)[1].split(sep).join('/')}`
